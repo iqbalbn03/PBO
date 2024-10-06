@@ -3,9 +3,9 @@ package Praktikum.pert3;
 public class AritmatikaDemo {
     public static void main(String[] args) {
         //Sedikit angka
-        int i = 37;
-        int j = 42;
-        double x = 27.475;
+        int i = 8;
+        int j = 2;
+        double x = 47.475;
         double y = 7.22;
         
         System.out.println("Variable values...");

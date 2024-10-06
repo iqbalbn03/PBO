@@ -1,130 +1,80 @@
-
-
-# Laporan Praktikum: Operator Logika, Aritmatika, dan Relasional di Java
-
-## 1. Tujuan
-Praktikum ini bertujuan untuk memahami penggunaan operator logika, aritmatika, dan relasional di dalam bahasa pemrograman Java, serta mempelajari bagaimana cara operator-operator ini bekerja dalam konteks kondisi dan operasi perhitungan.
-
-## 2. Teori Dasar
-Java memiliki berbagai jenis operator yang digunakan untuk melakukan operasi dasar pada variabel. Tiga jenis operator yang digunakan dalam praktikum ini adalah:
-
-- **Operator Logika**: Digunakan untuk mengoperasikan nilai boolean, seperti `&&`, `||`, `!`, dan `&`.
-- **Operator Aritmatika**: Digunakan untuk melakukan operasi matematika dasar seperti penambahan (`+`), pengurangan (`-`), perkalian (`*`), pembagian (`/`), dan modulus (`%`).
-- **Operator Relasional**: Digunakan untuk membandingkan dua nilai dan menghasilkan nilai boolean. Contohnya adalah `==`, `!=`, `>`, `<`, `>=`, dan `<=`.
-
-## 3. Alat dan Bahan
-- Laptop atau komputer
-- Java Development Kit (JDK)
-- IDE (Integrated Development Environment) seperti IntelliJ IDEA atau Eclipse
-
-## 4. Langkah-Langkah Percobaan
-
-### A. Operator Logika
-1. Buat program Java untuk mendemonstrasikan penggunaan operator logika `&&` dan `&`.
-2. Gunakan dua variabel `i` dan `j` dengan nilai awal yang berbeda.
-3. Lakukan operasi menggunakan operator `&&` dan `&` serta perhatikan hasil yang ditampilkan.
-
-### B. Operator Aritmatika
-1. Buat program Java yang menggunakan operator aritmatika `+`, `-`, `*`, `/`, dan `%`.
-2. Tentukan dua variabel angka (misalnya `a = 10` dan `b = 5`).
-3. Lakukan operasi aritmatika dengan variabel tersebut dan tampilkan hasilnya di konsol.
-
-### C. Operator Relasional
-1. Buat program Java untuk membandingkan dua variabel angka menggunakan operator relasional seperti `==`, `!=`, `>`, `<`, `>=`, `<=`.
-2. Tentukan dua variabel angka (misalnya `x = 15` dan `y = 20`).
-3. Bandingkan kedua variabel tersebut dengan berbagai operator relasional dan tampilkan hasilnya di konsol.
-
-## 5. Kode Program
-
-### A. Operator Logika
+Penjelasan dan pembahasan dari setiap baris kode pada program `AritmatikaDemo`:
 
 ```java
-public class OperatorLogika {
-    public static void main(String[] args) {
-        int i = 0;
-        int j = 10;
-        boolean test = false;
-
-        // Demonstrasi penggunaan operator &&
-        test = (i > 10) && (j++ > 9);
-        System.out.println("Setelah &&: ");
-        System.out.println("Nilai i: " + i);
-        System.out.println("Nilai j: " + j);
-        System.out.println("Nilai test: " + test);
-
-        // Demonstrasi penggunaan operator &
-        test = (i > 10) & (j++ > 9);
-        System.out.println("\nSetelah &:");
-        System.out.println("Nilai i: " + i);
-        System.out.println("Nilai j: " + j);
-        System.out.println("Nilai test: " + test);
-    }
-}
+package Praktikum.pert3;
 ```
-
-### B. Operator Aritmatika
+- **Baris 1:** Deklarasi package bernama `Praktikum.pert3`. Package adalah kumpulan class yang digunakan untuk mengelompokkan class dengan tujuan menghindari konflik nama dan mempermudah pengorganisasian kode.
 
 ```java
-public class OperatorAritmatika {
-    public static void main(String[] args) {
-        int a = 10;
-        int b = 5;
-
-        System.out.println("Penjumlahan (a + b): " + (a + b));
-        System.out.println("Pengurangan (a - b): " + (a - b));
-        System.out.println("Perkalian (a * b): " + (a * b));
-        System.out.println("Pembagian (a / b): " + (a / b));
-        System.out.println("Modulus (a % b): " + (a % b));
-    }
-}
+public class AritmatikaDemo {
 ```
-
-### C. Operator Relasional
+- **Baris 2:** Mendefinisikan class bernama `AritmatikaDemo`. Dalam Java, semua kode harus ditulis di dalam class. Class ini bersifat `public` sehingga dapat diakses dari luar package.
 
 ```java
-public class OperatorRelasional {
     public static void main(String[] args) {
-        int x = 15;
-        int y = 20;
-
-        System.out.println("x == y: " + (x == y));  // false
-        System.out.println("x != y: " + (x != y));  // true
-        System.out.println("x > y: " + (x > y));    // false
-        System.out.println("x < y: " + (x < y));    // true
-        System.out.println("x >= y: " + (x >= y));  // false
-        System.out.println("x <= y: " + (x <= y));  // true
-    }
-}
 ```
+- **Baris 3:** Deklarasi method `main`. Method ini adalah titik awal eksekusi program Java. `public` menandakan bahwa method ini dapat diakses dari luar class. `static` menandakan method ini milik class, bukan objek. `void` berarti method ini tidak mengembalikan nilai. `String[] args` digunakan untuk menerima argumen dari command line.
 
-## 6. Hasil Percobaan
+```java
+        int i = 8;
+        int j = 2;
+        double x = 47.475;
+        double y = 7.22;
+```
+- **Baris 4-7:** Mendeklarasikan dan menginisialisasi variabel:
+  - `i` dan `j` adalah tipe data `int` (bilangan bulat), masing-masing bernilai 8 dan 2.
+  - `x` dan `y` adalah tipe data `double` (bilangan desimal), masing-masing bernilai 47.475 dan 7.22.
 
-### A. Operator Logika
-- **&& (Logical AND)**: Menghasilkan `false` karena kondisi pertama (`i > 10`) salah, sehingga kondisi kedua (`j++ > 9`) tidak dievaluasi.
-- **& (Bitwise AND)**: Kondisi pertama salah, tetapi kondisi kedua tetap dievaluasi, sehingga `j` bertambah menjadi 11.
+```java
+        System.out.println("Variable values...");
+        System.out.println(" i = " + i);
+        System.out.println(" j = " + j);
+        System.out.println(" x = " + x);
+        System.out.println(" y = " + y);
+```
+- **Baris 9-13:** Menampilkan nilai dari variabel `i`, `j`, `x`, dan `y` ke layar menggunakan method `System.out.println`. Tanda `+` digunakan untuk menggabungkan string dengan nilai variabel.
 
-### B. Operator Aritmatika
-- Hasil dari berbagai operasi aritmatika menghasilkan:
-  - Penjumlahan: `15`
-  - Pengurangan: `5`
-  - Perkalian: `50`
-  - Pembagian: `2`
-  - Modulus: `0`
+```java
+        System.out.println("Adding...");
+        System.out.println(" i + j = " + (i + j));
+        System.out.println(" x + y = " + (x + y));
+```
+- **Baris 15-17:** Menampilkan hasil penjumlahan variabel `i` dan `j`, serta `x` dan `y`. Operator `+` digunakan untuk operasi penjumlahan.
 
-### C. Operator Relasional
-- Perbandingan antara `x` dan `y` menghasilkan:
-  - `x == y`: `false`
-  - `x != y`: `true`
-  - `x > y`: `false`
-  - `x < y`: `true`
-  - `x >= y`: `false`
-  - `x <= y`: `true`
+```java
+        System.out.println("Subtracting...");
+        System.out.println(" i - j = " + (i - j));
+        System.out.println(" x - y = " + (x - y));
+```
+- **Baris 19-21:** Menampilkan hasil pengurangan variabel `i` dan `j`, serta `x` dan `y`. Operator `-` digunakan untuk operasi pengurangan.
 
-## 7. Pembahasan
-- **Operator Logika**: Operator `&&` tidak akan mengevaluasi kondisi kedua jika kondisi pertama salah, sedangkan `&` akan mengevaluasi kedua kondisi terlepas dari hasil kondisi pertama.
-- **Operator Aritmatika**: Operator ini berfungsi sesuai dengan aturan matematika dasar dan digunakan untuk operasi perhitungan numerik.
-- **Operator Relasional**: Digunakan untuk membandingkan dua nilai, menghasilkan hasil berupa nilai boolean (`true` atau `false`).
+```java
+        System.out.println("Multiplying...");
+        System.out.println(" i * j = " + (i * j));
+        System.out.println(" x * y = " + (x * y));
+```
+- **Baris 23-25:** Menampilkan hasil perkalian variabel `i` dan `j`, serta `x` dan `y`. Operator `*` digunakan untuk operasi perkalian.
 
-## 8. Kesimpulan
-Dari praktikum ini, dapat disimpulkan bahwa operator logika, aritmatika, dan relasional di Java memiliki peran penting dalam menentukan alur logika program serta melakukan perhitungan dan perbandingan nilai. Memahami penggunaan operator ini penting dalam mengembangkan program yang efisien dan logis.
+```java
+        System.out.println("Dividing...");
+        System.out.println(" i / j = " + (i / j));
+        System.out.println(" x / y = " + (x / y));
+```
+- **Baris 27-29:** Menampilkan hasil pembagian variabel `i` dan `j`, serta `x` dan `y`. Operator `/` digunakan untuk operasi pembagian.
 
+```java
+        System.out.println("Computing the remainder...");
+        System.out.println(" i % j = " + (i % j));
+        System.out.println(" x % y = " + (x % y));
+```
+- **Baris 31-33:** Menampilkan hasil operasi modulus atau sisa bagi variabel `i` dan `j`, serta `x` dan `y`. Operator `%` digunakan untuk menghitung sisa pembagian.
+
+```java
+        System.out.println("Mixing tipes...");
+        System.out.println(" i + j = " + (j + y));
+        System.out.println(" i * x = " + (i * x));
+```
+- **Baris 35-37:** Menampilkan hasil dari operasi dengan tipe data yang berbeda. Pada baris pertama, variabel `j` (int) dijumlahkan dengan `y` (double). Pada baris kedua, variabel `i` (int) dikalikan dengan `x` (double). Dalam kedua kasus, hasil akan bertipe `double` karena tipe `double` lebih presisi.
+
+### Kesimpulan
+Program ini menunjukkan bagaimana melakukan operasi aritmatika dasar (penjumlahan, pengurangan, perkalian, pembagian, dan modulus) pada tipe data `int` dan `double`, serta bagaimana Java menangani operasi antara dua tipe data yang berbeda.
